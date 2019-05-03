@@ -1443,6 +1443,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1112619640}
   - component: {fileID: 1112619639}
+  - component: {fileID: 1112619641}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1481,6 +1482,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1112619641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1112619638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c85bf5966dff6748a51f3691c292099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  jumpForce: 10
 --- !u!1 &1250389595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1590,6 +1604,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2033017263}
+  - component: {fileID: 2033017264}
   m_Layer: 0
   m_Name: Look root
   m_TagString: Untagged
@@ -1613,3 +1628,24 @@ Transform:
   m_Father: {fileID: 1112619640}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2033017264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2033017262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd48e6ade248bdc48976641aa7a74475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerRoot: {fileID: 1112619640}
+  _lookRoot: {fileID: 2033017263}
+  _invert: 0
+  _canUnlock: 1
+  _sensivity: 5
+  _smoothSteps: 3
+  _smoothWeight: 0.4
+  _rollAngle: 3
+  _rollSpeed: 3
+  _defaultLookLimits: {x: -70, y: 80}
