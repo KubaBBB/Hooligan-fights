@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponManager : MonoBehaviour {
+public class WeaponManager : MonoBehaviour
+{
 
     [SerializeField]
     private WeaponHandler [] _weaponHandlers;
@@ -10,14 +11,16 @@ public class WeaponManager : MonoBehaviour {
     private int _currentWeapoinIndex;
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start ()
+    {
         _currentWeapoinIndex = 0;
         _weaponHandlers [_currentWeapoinIndex].gameObject.SetActive ( true );
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+    // Update is called once per frame
+    void Update ()
+    {
         if ( Input.GetKeyDown ( KeyCode.Alpha1 ) )
         {
             TurnOnSelectedWeapon ( 0 ); //Axe
@@ -34,16 +37,19 @@ public class WeaponManager : MonoBehaviour {
         }
     }
 
-    void TurnOnSelectedWeapon(int weaponIndex )
+    void TurnOnSelectedWeapon ( int weaponIndex )
     {
-        _weaponHandlers [_currentWeapoinIndex].gameObject.SetActive ( false );
+        if ( _currentWeapoinIndex != weaponIndex )
+        {
+            _weaponHandlers [_currentWeapoinIndex].gameObject.SetActive ( false );
 
-        _weaponHandlers [weaponIndex].gameObject.SetActive ( true );
+            _weaponHandlers [weaponIndex].gameObject.SetActive ( true );
 
-        _currentWeapoinIndex = weaponIndex;
+            _currentWeapoinIndex = weaponIndex;
+        }
     }
 
-    public WeaponHandler GetCurrentWeaponHandler()
+    public WeaponHandler GetCurrentSelectedWeapon ()
     {
         return _weaponHandlers [_currentWeapoinIndex];
     }

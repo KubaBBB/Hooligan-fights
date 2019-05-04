@@ -36,7 +36,7 @@ public class WeaponHandler : MonoBehaviour
 
     public WeaponAim weaponAim;
     public WeaponFireType fireType;
-    public WeaponBulletType weaponBulletType;
+    public WeaponBulletType bulletType;
     public GameObject attackPoint;
 
     void Awake ()

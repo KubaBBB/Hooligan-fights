@@ -8,17 +8,17 @@ public class PlayerFootsteps : MonoBehaviour
     private AudioSource _footstepSound;
 
     [SerializeField]
-    public AudioClip [] _footstepClip;
+    public AudioClip [] footstepClip;
 
     private CharacterController _characterController;
 
     [HideInInspector]
-    public float _volumeMin, _volumeMax;
+    public float volumeMin, volumeMax;
 
     private float _accumulatedDistance;
 
     [HideInInspector]
-    public float _stepDistance;
+    public float stepDistance;
 
     private void Awake ()
     {
@@ -47,10 +47,10 @@ public class PlayerFootsteps : MonoBehaviour
         {
             _accumulatedDistance += Time.deltaTime;
 
-            if ( _accumulatedDistance > _stepDistance )
+            if ( _accumulatedDistance > stepDistance )
             {
-                _footstepSound.volume = Random.Range ( _volumeMin, _volumeMax );
-                _footstepSound.clip = _footstepClip [Random.Range ( 0, _footstepClip.Length )];
+                _footstepSound.volume = Random.Range ( volumeMin, volumeMax );
+                _footstepSound.clip = footstepClip [Random.Range ( 0, footstepClip.Length )];
                 _footstepSound.Play ();
 
                 _accumulatedDistance = 0f;

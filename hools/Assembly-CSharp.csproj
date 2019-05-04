@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Helper Scripts\TagHolder.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\MouseLook.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerFootsteps.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerSprintAndCrouch.cs" />
