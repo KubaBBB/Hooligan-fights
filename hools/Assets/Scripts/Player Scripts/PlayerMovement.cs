@@ -6,11 +6,11 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 _moveDirection;
 
-    private float _gravity = 9.81f;
+    private float _gravity = 4 * 9.81f;
     private float _verticalVelocity;
 
     public float speed = 5f;
-    public float jumpForce = 4;
+    public float jumpForce = 10;
     
     private void Awake ()
     {

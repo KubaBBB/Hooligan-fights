@@ -54,6 +54,11 @@ public class WeaponHandler : MonoBehaviour
         _anim.SetBool ( AnimationTags.AIM_PARAMETER, isPossibleToAim );
     }
 
+    public bool IsIdle()
+    {
+        return _anim.GetCurrentAnimatorStateInfo(0).IsName("Idle");
+    }
+
     void TurnOnMuzzleFlash ()
     {
         _muzzleFlash.SetActive ( true );

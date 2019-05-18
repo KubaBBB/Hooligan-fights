@@ -15,16 +15,16 @@ public class MouseLook : MonoBehaviour
     private float _sensivity = 5f;
 
     [SerializeField]
-    private int _smoothSteps = 2;
+    private int _smoothSteps = 10;
 
     [SerializeField]
     private float _smoothWeight = 0.4f;
 
     [SerializeField]
-    private float _rollAngle = 1f;
+    private float _rollAngle = 10f;
 
     [SerializeField]
-    private float _rollSpeed = 1f;
+    private float _rollSpeed = 3f;
 
     [SerializeField]
     private Vector2 _defaultLookLimits = new Vector2 ( -70f, 80f );
