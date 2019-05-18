@@ -54,7 +54,7 @@ public class PlayerAttack : MonoBehaviour {
                 {
                     _weaponManager.GetCurrentSelectedWeapon ().ShootAnimation ();
 
-                    //BulletFired();
+                    BulletFired();
                 }
                 else
                 {
@@ -80,7 +80,7 @@ public class PlayerAttack : MonoBehaviour {
             if(Input.GetMouseButton(0) && Time.time > nextTimeToFire )
             {
                 nextTimeToFire = Time.time + 1f /fireRate;
-
+                BulletFired();
                 _weaponManager.GetCurrentSelectedWeapon ().ShootAnimation ();
             }
         }
@@ -115,6 +115,17 @@ public class PlayerAttack : MonoBehaviour {
                 is_Aiming = false;
             }
         }
+    }
 
+    void BulletFired() {
+        
+        RaycastHit hit;
+
+        if (Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out hit))
+        {
+            if (hit.transform.tag == Tags.ENEMY_TAG) {
+                hit.transform.GetComponent<HealthScript>().ApplyDamage(damage);
+            }
+        }
     }
 }
