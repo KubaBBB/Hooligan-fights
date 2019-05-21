@@ -17,6 +17,8 @@ public class HealthScript : MonoBehaviour {
 
 	private PlayerStats playerStats;
 
+	public GameObject deathMenu;
+
 	void Awake () {
 		if(isCannibal)
 		{
@@ -87,16 +89,19 @@ public class HealthScript : MonoBehaviour {
 			EnemyManager.instance.EnemyDied(true);
 		}
 
-			if(tag == Tags.PLAYER_TAG) 
+		if(tag == Tags.PLAYER_TAG) 
 		{
-				Invoke("RestartGame", 3f);
+			Cursor.lockState = CursorLockMode.None;
+			RestartGame();
 		} else {
-				Invoke("TurnOffGameObject", 10f);
+			ScoreScript.scoreValue++;
+			Invoke("TurnOffGameObject", 10f);
 		}
 	}
 
 	void RestartGame() {
-		UnityEngine.SceneManagement.SceneManager.LoadScene("Gameplay");
+		deathMenu.SetActive(true);
+		//UnityEngine.SceneManagement.SceneManager.LoadScene("Gameplay");
 	}
 
 	void TurnOffGameObject() {

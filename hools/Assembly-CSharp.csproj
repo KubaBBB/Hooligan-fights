@@ -57,6 +57,8 @@
      <Compile Include="Assets\Scripts\Enemy Scripts\EnemyAudio.cs" />
      <Compile Include="Assets\Scripts\Enemy Scripts\EnemyController.cs" />
      <Compile Include="Assets\Scripts\Enemy Scripts\EnemyManager.cs" />
+     <Compile Include="Assets\Scripts\Helper Scripts\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\Helper Scripts\ScoreScript.cs" />
      <Compile Include="Assets\Scripts\Helper Scripts\TagHolder.cs" />
      <Compile Include="Assets\Scripts\Player Scripts\AttackScript.cs" />
      <Compile Include="Assets\Scripts\Player Scripts\AxeSound.cs" />
