@@ -13,8 +13,8 @@ TASKI:
 [/] MENU rozgrywki ???? - wpisywanie nicku, top scores? (na razie tylko play game i quit/restart)  
 [ ] pasek zycia
 
-bugi do szybkiego fixa:
-[ ] animacja strzałów z broni palnej + dzwięk (karabin maszynowy)
-[ ] zatrzmywanie sprintu
-[ ] pasek staminy nie spada
-[ ] przechodzenie przez tekstury (np drzewa)
+bugi do szybkiego fixa:  
+[ ] animacja strzałów z broni palnej + dzwięk (karabin maszynowy)  
+[ ] zatrzmywanie sprintu  
+[ ] pasek staminy nie spada  
+[ ] przechodzenie przez tekstury (np drzewa)  
