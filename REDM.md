@@ -5,7 +5,7 @@ TASKI:
 [ ] Maczeta (rece sa gotowe, tylko klinga) + animacje ataku itd  
 [ ] pseudokibic ( barwy i kolorki, model ludka jest ready)  
 [ ] raca - na wzór włóczni gotowego assetu  
-[ ] modyfikacja planszy - CRITICAL PRIORIY !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+[ ] modyfikacja planszy - CRITICAL PRIORIY !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  
 [ ] dzwiek - przyspiewki, teksty wpierdolu itd itp  
 [x] rozlokowanie wielu pseudokibicow (zrobiony enemy manager)  
 [x] liczenie punktow  
