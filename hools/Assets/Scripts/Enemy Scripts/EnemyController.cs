@@ -26,7 +26,6 @@ public class EnemyController : MonoBehaviour {
 	public float patrolRadiusMin = 20f, patrolRadiusMax = 60f;
 	public float patrolForThisTime = 15f;
 	private float patrolTimer;
-
 	public float waitBeforeAttack = 2f;
 	private float attackTimer;
 
@@ -34,12 +33,15 @@ public class EnemyController : MonoBehaviour {
 
 	public GameObject attackPoint;
 
+	private EnemyAudio enemyAudio;
+
 	void Awake()
 	{
 		enemyAnim = GetComponent<EnemyAnimator>();
 		navAgent = GetComponent<NavMeshAgent>();
 
 		target = GameObject.FindWithTag(Tags.PLAYER_TAG).transform;
+		enemyAudio = GetComponentInChildren<EnemyAudio>();
 	}
 
 	// Use this for initialization
@@ -100,7 +102,7 @@ public class EnemyController : MonoBehaviour {
 			enemyAnim.Walk(false);
 			enemyState = EnemyState.CHASE;
 
-			// play spotted audio
+			enemyAudio.PlayScreamSound();
 		}
 	}
 
@@ -155,7 +157,7 @@ public class EnemyController : MonoBehaviour {
 		{
 			enemyAnim.Attack();
 			attackTimer = 0f;
-			// play attack sound
+			enemyAudio.PlayAttackSound();
 		}
 
 		if (Vector3.Distance(transform.position, target.position) > attackDistance + chaseAfterAttack)

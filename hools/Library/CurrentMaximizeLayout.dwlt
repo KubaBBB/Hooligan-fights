@@ -20,10 +20,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 681, y: 492}
-  m_MaxSize: {x: 14004, y: 14042}
+  m_MinSize: {x: 681, y: 342}
+  m_MaxSize: {x: 12006, y: 8042}
   vertical: 0
-  controlID: 12598
+  controlID: 16506
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -47,7 +47,7 @@ MonoBehaviour:
     x: 403
     y: 19
     width: 965
-    height: 575
+    height: 513
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 1
   m_Gizmos: 0
@@ -61,8 +61,8 @@ MonoBehaviour:
     vZoomLockedByDefault: 0
     m_HBaseRangeMin: -482.5
     m_HBaseRangeMax: 482.5
-    m_VBaseRangeMin: -279
-    m_VBaseRangeMax: 279
+    m_VBaseRangeMin: -248
+    m_VBaseRangeMax: 248
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -81,9 +81,9 @@ MonoBehaviour:
       x: 0
       y: 17
       width: 965
-      height: 558
+      height: 496
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 482.5, y: 279}
+    m_Translation: {x: 482.5, y: 248}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -91,14 +91,14 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -482.5
-      y: -279
+      y: -248
       width: 965
-      height: 558
+      height: 496
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 965, y: 575}
+  m_LastWindowPixelSize: {x: 965, y: 513}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -123,10 +123,10 @@ MonoBehaviour:
     y: 0
     width: 1370
     height: 947
-  m_MinSize: {x: 404, y: 492}
-  m_MaxSize: {x: 10002, y: 14042}
+  m_MinSize: {x: 404, y: 342}
+  m_MaxSize: {x: 8004, y: 8042}
   vertical: 1
-  controlID: 12599
+  controlID: 16507
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -146,11 +146,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1370
-    height: 596
+    height: 534
   m_MinSize: {x: 404, y: 221}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 12600
+  controlID: 16478
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -168,7 +168,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 401
-    height: 596
+    height: 534
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
@@ -199,32 +199,32 @@ MonoBehaviour:
     x: 1280
     y: 92
     width: 399
-    height: 575
+    height: 513
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 8ad0ffff8ed0ffff98d0ffff9cd0ffffaad0ffff0ed1ffff16d1ffff32d1ffff34d1ffff84f2ffff86f2ffff96f2fffffef9ffffe6fbffff000000002c110000361100005c110000
+    m_SelectedIDs: 26110000
+    m_LastClickedID: 4390
+    m_ExpandedIDs: a038f6ff4c4bf8ff4e4bf8ff40fbf8ff4645f9fffcf9ffffe6fbffff000000009e110000a2110000a8110000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Cannibal Spawn Points
+      m_OriginalName: Cannibal Spawn Points
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: -640864
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
   m_ExpandedScenes:
-  - SampleScene
+  - Gameplay
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
@@ -246,7 +246,7 @@ MonoBehaviour:
     x: 401
     y: 0
     width: 969
-    height: 596
+    height: 534
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 2}
@@ -279,17 +279,17 @@ MonoBehaviour:
     x: 1683
     y: 92
     width: 965
-    height: 575
+    height: 513
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 12331.218962192715
+  lastFramingTime: 6391.811790184921
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 44.910244, y: 21.97, z: 109.16159}
+    m_Target: {x: 92.68135, y: 15.137175, z: 100.80077}
     speed: 2
-    m_Value: {x: 44.910244, y: 21.97, z: 109.16159}
+    m_Value: {x: 92.68135, y: 15.137175, z: 100.80077}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -317,13 +317,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.105660155, y: 0.7881654, z: -0.14123282, w: 0.5896478}
+    m_Target: {x: -0.017623281, y: 0.98139185, z: -0.11118322, w: -0.15555654}
     speed: 2
-    m_Value: {x: 0.10566016, y: 0.7881654, z: -0.14123282, w: 0.5896478}
+    m_Value: {x: -0.017623283, y: 0.98139185, z: -0.11118322, w: -0.15555654}
   m_Size:
-    m_Target: 3.7375114
+    m_Target: 109.12609
     speed: 2
-    m_Value: 3.7375114
+    m_Value: 109.12609
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -375,19 +375,19 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 596
+    y: 534
     width: 1370
-    height: 351
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
-  m_ActualView: {fileID: 11}
+    height: 413
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 11}
   - {fileID: 12}
   - {fileID: 13}
   - {fileID: 14}
-  m_Selected: 0
-  m_LastSelected: 2
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -409,9 +409,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 1280
-    y: 688
+    y: 626
     width: 1368
-    height: 330
+    height: 392
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -425,20 +425,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Models/Characters/Canibal/Cannibal Animations
+    - Assets/Prefabs/Enemy Prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Models/Characters/Canibal/Cannibal Animations
+  - Assets/Prefabs/Enemy Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\latos\Documents\Unity\Hooligan-fights\hools
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 120}
-    m_SelectedIDs: 120b0000
-    m_LastClickedID: 2834
-    m_ExpandedIDs: 0000000080090000580a0000ee0a00003a0b00008c0c0000de0c00002a0d0000d60d0000e40d00004410000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: da100000
+    m_LastClickedID: 4314
+    m_ExpandedIDs: 0000000088090000600a0000f60a0000440b0000ec0c00004a10000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -466,7 +466,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000080090000580a0000ee0a00003a0b00008c0c0000de0c00002a0d0000d60d0000e40d00004410000000ca9a3b
+    m_ExpandedIDs: 0000000088090000600a0000f60a0000440b0000ec0c00004a10000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -491,8 +491,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 1a3cf6ff
+    m_LastClickedInstanceID: -639974
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000280f0000a60c0000800d0000
     m_RenameOverlay:
@@ -542,9 +542,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 1280
-    y: 688
+    y: 626
     width: 1368
-    height: 330
+    height: 392
   m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &13
 MonoBehaviour:
@@ -567,7 +567,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 1280
-    y: 688
+    y: 794
     width: 1368
     height: 330
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -580,14 +580,14 @@ MonoBehaviour:
     - {fileID: 1107518439144201168, guid: 5c0926c75a285d3498630d5b01493308, type: 2}
     - {fileID: 1107447088595752356, guid: b36775094c9379a4eb71ad57221416e9, type: 2}
     m_ValueSerializationHelper:
-    - e00: 0.957
+    - e00: 0.884
       e01: 0
       e02: 0
       e03: 15
       e10: 0
-      e11: 0.957
+      e11: 0.884
       e12: 0
-      e13: 101.171
+      e13: 61.752
       e20: 0
       e21: 0
       e22: 1
@@ -715,14 +715,14 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 1280
-    y: 688
+    y: 732
     width: 1368
-    height: 330
+    height: 392
   m_PersistentViewDataDictionary: {fileID: 0}
   m_AnimEditor: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 4406
+  m_LastSelectedObjectID: 4390
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -741,8 +741,8 @@ MonoBehaviour:
     y: 0
     width: 550
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -780,7 +780,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewResizer:
-    m_CachedPref: 511
+    m_CachedPref: 202
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}

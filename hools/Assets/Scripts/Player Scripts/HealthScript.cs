@@ -11,8 +11,11 @@ public class HealthScript : MonoBehaviour {
 
 	public float health = 100f;
 	public bool isPlayer, isCannibal;
-
 	private bool isDead;
+
+	private EnemyAudio enemyAudio;
+
+	private PlayerStats playerStats;
 
 	void Awake () {
 		if(isCannibal)
@@ -22,11 +25,12 @@ public class HealthScript : MonoBehaviour {
 			navAgent = GetComponent<NavMeshAgent>();
 
 			// get enemy audio
+			enemyAudio = GetComponentInChildren<EnemyAudio>();
 		}
 
 		if(isPlayer)
 		{
-
+			playerStats = GetComponent<PlayerStats>();
 		}
 	}
 	
@@ -39,7 +43,7 @@ public class HealthScript : MonoBehaviour {
 
 		if(isPlayer)
 		{
-			// show UI
+			playerStats.DisplayHealthStats(health);
 		}
 
 		if(isCannibal)
@@ -65,8 +69,9 @@ public class HealthScript : MonoBehaviour {
 			enemyAnim.Dead();
 
 			//Start Couroutine
-
+			StartCoroutine(DeadSound());
 			//Enemy Manager spawn more enemies
+			EnemyManager.instance.EnemyDied(true);
 
 		}
 
@@ -75,14 +80,14 @@ public class HealthScript : MonoBehaviour {
 			for (int i=0; i<enemies.Length; i++) {
 				enemies[i].GetComponent<EnemyController>().enabled = false;
 				// call enemy manager to stop spawning
-
-				GetComponent<PlayerMovement>().enabled = false;
-				GetComponent<PlayerAttack>().enabled = false;
-				GetComponent<WeaponManager>().GetCurrentSelectedWeapon().gameObject.SetActive(false);
 			}
+			GetComponent<PlayerMovement>().enabled = false;
+			GetComponent<PlayerAttack>().enabled = false;
+			GetComponent<WeaponManager>().GetCurrentSelectedWeapon().gameObject.SetActive(false);
+			EnemyManager.instance.EnemyDied(true);
 		}
 
-		if(tag == Tags.PLAYER_TAG) 
+			if(tag == Tags.PLAYER_TAG) 
 		{
 				Invoke("RestartGame", 3f);
 		} else {
@@ -96,5 +101,10 @@ public class HealthScript : MonoBehaviour {
 
 	void TurnOffGameObject() {
 		gameObject.SetActive(false);
+	}
+
+	IEnumerator DeadSound() {
+		yield return new WaitForSeconds(0.3f);
+		enemyAudio.PlayDeadSound();
 	}
 }
