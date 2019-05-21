@@ -7,7 +7,7 @@ TASKI:
 [ ] raca - na wzór włóczni gotowego assetu  
 [ ] modyfikacja planszy  
 [ ] dzwiek - przyspiewki, teksty wpierdolu itd itp  
-[x] rozlokowanie wielu pseudokibicow (zrobiony enemy manager) 
-[x] liczenie punktow
-[/] pasek sily (zmeczenie) (na razie tylko przy bieganiu sie zmniejsza)
-[/] MENU rozgrywki ???? - wpisywanie nicku, top scores? (na razie tylko play game i quit/restart)
+[x] rozlokowanie wielu pseudokibicow (zrobiony enemy manager)  
+[x] liczenie punktow  
+[/] pasek sily (zmeczenie) (na razie tylko przy bieganiu sie zmniejsza)  
+[/] MENU rozgrywki ???? - wpisywanie nicku, top scores? (na razie tylko play game i quit/restart)  
