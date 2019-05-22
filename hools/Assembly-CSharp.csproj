@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Rocks and Boulders 2\Shaders\RotateGameObject.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\EnemyAnimator.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\EnemyAudio.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\EnemyController.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Assets\Scripts\Player Scripts\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\Weapons Scripts\WeaponHandler.cs" />
     <Compile Include="Assets\Scripts\Weapons Scripts\WeaponManager.cs" />
+    <None Include="Assets\Rocks and Boulders 2\Shaders\shader info.txt" />
     <None Include="Assets\Shaders\Standard\_Antialiasing\SSAA.shader" />
     <None Include="Assets\Shaders\Standard\_DepthOfField\DepthOfField34.shader" />
     <None Include="Assets\Shaders\Standard\_Antialiasing\FXAAPreset3.shader" />
@@ -92,9 +94,11 @@
     <None Include="Assets\Shaders\Standard\_BloomAndFlares\BlurAndFlares.shader" />
     <None Include="Assets\Shaders\Standard\_DepthOfField\SeparableWeightedBlurDof34.shader" />
     <None Include="Assets\Shaders\Standard\ColorCorrectionCurvesSimple.shader" />
+    <None Include="Assets\Rocks and Boulders 2\Shaders\Blend SM3.shader" />
     <None Include="Assets\Shaders\Standard\_Antialiasing\NFAA.shader" />
     <None Include="Assets\Shaders\Standard\_Antialiasing\FXAA3Console.shader" />
     <None Include="Assets\Shaders\Standard\_Antialiasing\DLAA.shader" />
+    <None Include="Assets\Rocks and Boulders 2\Shaders\Blend SM2.shader" />
     <None Include="Assets\Shaders\Standard\_BloomAndFlares\LensFlareCreate.shader" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/BOLSON-PC/Desktop/studia/IT/gra/Hooligan-fights/Hooligan-fights/hools/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
