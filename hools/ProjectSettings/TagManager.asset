@@ -9,6 +9,9 @@ TagManager:
   - Look Root
   - FP Camera
   - Enemy
+  - Fists
+  - Revolver
+  - Machete
   layers:
   - Default
   - TransparentFX

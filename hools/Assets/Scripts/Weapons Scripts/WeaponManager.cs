@@ -38,7 +38,12 @@ public class WeaponManager : MonoBehaviour
 
         if ( Input.GetKeyDown ( KeyCode.Alpha4 ) )
         {
-            TurnOnSelectedWeapon ( 2 ); //assault rif
+            TurnOnSelectedWeapon ( 3 ); //assault rif
+        }
+
+        if ( Input.GetKeyDown ( KeyCode.Alpha5 ) )
+        {
+            TurnOnSelectedWeapon ( 4 ); //machete
         }
     }
 
