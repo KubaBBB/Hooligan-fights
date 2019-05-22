@@ -22,6 +22,11 @@ public enum WeaponBulletType
     NONE
 }
 
+public enum WeaponMeleeType
+{
+    AXE,
+    FISTS
+}
 
 public class WeaponHandler : MonoBehaviour
 {
@@ -37,6 +42,7 @@ public class WeaponHandler : MonoBehaviour
     public WeaponAim weaponAim;
     public WeaponFireType fireType;
     public WeaponBulletType bulletType;
+    public WeaponMeleeType meleeType;
     public GameObject attackPoint;
 
     void Awake ()

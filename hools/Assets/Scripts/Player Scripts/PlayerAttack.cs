@@ -7,7 +7,9 @@ public class PlayerAttack : MonoBehaviour {
     private WeaponManager _weaponManager;
 
     public float fireRate = 15f;
-    public float damage = 20f;
+    public float damage_axe = 40f;
+    public float damage_fist = 10f;
+    public float damage = 25f;
 
     private float nextTimeToFire;
 

@@ -6,7 +6,10 @@ using UnityEngine.UI;
 public class PlayerStats : MonoBehaviour {
 
 	[SerializeField]
-	private Image healthStats, staminaStats;
+	private Image healthStats;
+
+	[SerializeField]
+	private Image staminaStats;
 
 	public void DisplayHealthStats(float healthValue) {
 		healthValue /= 100f;

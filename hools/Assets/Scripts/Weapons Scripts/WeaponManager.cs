@@ -23,15 +23,20 @@ public class WeaponManager : MonoBehaviour
     {
         if ( Input.GetKeyDown ( KeyCode.Alpha1 ) )
         {
-            TurnOnSelectedWeapon ( 0 ); //Axe
+            TurnOnSelectedWeapon ( 0 ); //Fists
         }
 
         if ( Input.GetKeyDown ( KeyCode.Alpha2 ) )
         {
-            TurnOnSelectedWeapon ( 1 ); //Rev
+            TurnOnSelectedWeapon ( 1 ); //Axe
         }
 
         if ( Input.GetKeyDown ( KeyCode.Alpha3 ) )
+        {
+            TurnOnSelectedWeapon ( 2 ); //Revolver
+        }
+
+        if ( Input.GetKeyDown ( KeyCode.Alpha4 ) )
         {
             TurnOnSelectedWeapon ( 2 ); //assault rif
         }
