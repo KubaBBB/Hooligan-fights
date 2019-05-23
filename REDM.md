@@ -21,7 +21,8 @@ TASKI:
 [ ] inne osobniki na mapie - np zwierzeta VERY LOW  
 [ ] MIASTO w rogu stworzone - wraz z kawałkiem drogi, stojącymi pojazdami (klimat niczym z amerykanskiego survivalu/horroru) NORMAL  
 [ ] DRZEWA zastąpione zwykłymi assetami  LOW  
-[ ] Zrobienie przejścia w wąwozie(most miedzy stronami) LOW    
+[ ] Zrobienie przejścia w wąwozie(most miedzy stronami) LOW 
+[ ] Pejsy do modelu przeciwnika LOW  
 
 bugi do szybkiego fixa:  
 [ ] animacja strzałów z broni palnej + dzwięk (karabin maszynowy) HIGH  
