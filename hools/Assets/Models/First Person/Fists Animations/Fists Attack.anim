@@ -40523,6 +40523,13 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
+  - time: 0.125
+    functionName: TurnOnAttackPoint
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.20833333
     functionName: PlaySound
     data: 
@@ -40530,8 +40537,15 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.25
-    functionName: TurnOnAttackPoint
+  - time: 0.33333334
+    functionName: TurnOffAttackPoint
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.41666666
+    functionName: TurnOnAttackPoint2
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
@@ -40544,8 +40558,8 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.7083333
-    functionName: TurnOffAttackPoint
+  - time: 0.6666667
+    functionName: TurnOffAttackPoint2
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

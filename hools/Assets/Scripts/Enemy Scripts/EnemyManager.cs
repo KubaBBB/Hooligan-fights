@@ -36,8 +36,8 @@ public class EnemyManager : MonoBehaviour {
 		}
 	}
 
+	int index = 0;
 	void SpawnEnemies() {
-		int index = 0;
 		for (int i=0; i<cannibalEnemyCount; i++)
 		{
 			if (index >= cannibalSpawnPoints.Length) {

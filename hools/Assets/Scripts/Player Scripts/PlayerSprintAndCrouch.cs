@@ -26,7 +26,6 @@ public class PlayerSprintAndCrouch : MonoBehaviour
     private float _crouchStepDistance = 0.5f;
 
     private PlayerStats playerStats;
-    private float sprintValue = 100f;
     public float sprintThreshold = 50f;
 
     private void Awake ()
@@ -54,7 +53,7 @@ public class PlayerSprintAndCrouch : MonoBehaviour
 
     void Sprint ()
     {
-        if(sprintValue > 0f) {
+        if(playerStats.stamina > 0f) {
             if ( Input.GetKeyDown ( KeyCode.LeftShift ) && !_isCrouching )
             {
                 _playerMovement.speed = sprintSpeed;
@@ -76,25 +75,25 @@ public class PlayerSprintAndCrouch : MonoBehaviour
 
         if(Input.GetKey(KeyCode.LeftShift) && !_isCrouching) 
         {
-            sprintValue -= sprintThreshold * Time.deltaTime;
-            if(sprintValue <= 0f) 
+            playerStats.stamina -= sprintThreshold * Time.deltaTime;
+            if(playerStats.stamina <= 0f) 
             {
-                sprintValue = 0f;
+                playerStats.stamina = 0f;
                 _playerMovement.speed = moveSpeed;
                 _playerFootsteps.stepDistance = _walkStepDistance;
                 _playerFootsteps.volumeMin = _walkVolumeMin;
                 _playerFootsteps.volumeMax = _walkVolumeMax;
             }
-            playerStats.DisplayStaminaStats(sprintValue);
+            playerStats.DisplayStaminaStats();
         }
         else
         {
-            if(sprintValue != 100f) {
-                sprintValue += sprintThreshold / 3f * Time.deltaTime;
-                playerStats.DisplayStaminaStats(sprintValue);
+            if(playerStats.stamina != 100f) {
+                playerStats.stamina += sprintThreshold / 3f * Time.deltaTime;
+                playerStats.DisplayStaminaStats();
 
-                if(sprintValue > 100f)
-                    sprintValue = 100f;
+                if(playerStats.stamina > 100f)
+                    playerStats.stamina = 100f;
             }
         }
 

@@ -44,6 +44,7 @@ public class WeaponHandler : MonoBehaviour
     public WeaponBulletType bulletType;
     public WeaponMeleeType meleeType;
     public GameObject attackPoint;
+    public GameObject attackPoint2;
 
     void Awake ()
     {
@@ -94,6 +95,17 @@ public class WeaponHandler : MonoBehaviour
     {
         if ( attackPoint.activeInHierarchy )
             attackPoint.SetActive ( false );
+    }
+
+        void TurnOnAttackPoint2 ()
+    {
+        attackPoint2.SetActive ( true );
+    }
+
+    void TurnOffAttackPoint2 ()
+    {
+        if ( attackPoint2.activeInHierarchy )
+            attackPoint2.SetActive ( false );
     }
     // Use this for initialization
     void Start ()

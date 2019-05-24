@@ -6,10 +6,9 @@ public class PlayerAttack : MonoBehaviour {
 
     private WeaponManager _weaponManager;
 
-    public float fireRate = 15f;
     public float damage_axe = 40f;
     public float damage_fist = 10f;
-    public float damage = 25f;
+    public float damage;
 
     private float nextTimeToFire;
 
@@ -21,25 +20,29 @@ public class PlayerAttack : MonoBehaviour {
     private GameObject crosshair;
 
     private bool is_Aiming;
+    public bool is_Blocking;
 
-	// Use this for initialization
-	void Awake () {
+    private PlayerStats playerStats;
+
+    // Use this for initialization
+    void Awake () {
         _weaponManager = GetComponent<WeaponManager> ();
+        playerStats = GetComponent<PlayerStats>();
 
         zoomCameraAnim = transform.Find(Tags.LOOK_ROOT).transform.Find(Tags.ZOOM_CAMERA).GetComponent<Animator>();
         crosshair = GameObject.FindWithTag(Tags.CROSSHAIR);
         mainCam = Camera.main;
-	}
+    }
 
     void Start () {
 
     }
-	
-	// Update is called once per frame
-	void Update () {
+    
+    // Update is called once per frame
+    void Update () {
         WeaponShoot ();
         ZoomInAndOut();
-	}
+    }
 
     void WeaponShoot ()
     {
@@ -76,14 +79,25 @@ public class PlayerAttack : MonoBehaviour {
                 }
             }
 
+            // if (Input.GetMouseButtonDown (1) && _weaponManager.GetCurrentSelectedWeapon().IsIdle() && _weaponManager.GetCurrentSelectedWeapon().meleeType == WeaponMeleeType.FISTS)
+            // {
+            //     is_Blocking = true;
+            //     _weaponManager.GetCurrentSelectedWeapon().Aim(true);
+            // }
+
+            // if (Input.GetMouseButtonUp (1) && _weaponManager.GetCurrentSelectedWeapon().meleeType == WeaponMeleeType.FISTS)
+            // {
+            //     is_Blocking = false;
+            //     _weaponManager.GetCurrentSelectedWeapon().Aim(false);
+            // }
         }
         else
         {
             if(Input.GetMouseButton(0) && Time.time > nextTimeToFire )
             {
-                nextTimeToFire = Time.time + 1f /fireRate;
+                _weaponManager.GetCurrentSelectedWeapon().ShootAnimation();
                 BulletFired();
-                _weaponManager.GetCurrentSelectedWeapon ().ShootAnimation ();
+                nextTimeToFire = Time.time + 0.2f;
             }
         }
     } // weapon shoot
@@ -106,16 +120,38 @@ public class PlayerAttack : MonoBehaviour {
 
         if (_weaponManager.GetCurrentSelectedWeapon().weaponAim == WeaponAim.SELF_AIM)
         {
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(1) && playerStats.stamina > 0f)
             {
                 _weaponManager.GetCurrentSelectedWeapon().Aim(true);
                 is_Aiming = true;
+                is_Blocking = true;
             }
+
             if (Input.GetMouseButtonUp(1))
             {
                 _weaponManager.GetCurrentSelectedWeapon().Aim(false);
                 is_Aiming = false;
+                is_Blocking = false;
             }
+
+            if (Input.GetMouseButton(1))
+            {
+                playerStats.stamina -= 10 * Time.deltaTime;
+                if(playerStats.stamina <= 0f) 
+                {
+                    playerStats.stamina = 0f;
+                    _weaponManager.GetCurrentSelectedWeapon().Aim(false);
+                    is_Aiming = false;
+                    is_Blocking = false;
+                }
+                else
+                {
+                    _weaponManager.GetCurrentSelectedWeapon().Aim(true);
+                    is_Aiming = true;
+                    is_Blocking = true;
+                }
+            }
+            playerStats.DisplayStaminaStats();
         }
     }
 

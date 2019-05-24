@@ -15,9 +15,12 @@ public class HealthScript : MonoBehaviour {
 
 	private EnemyAudio enemyAudio;
 
+	private PlayerAttack playerAttack;
 	private PlayerStats playerStats;
 
 	public GameObject deathMenu;
+	public GameObject UI;
+	public GameObject crosshair;
 
 	void Awake () {
 		if(isCannibal)
@@ -33,6 +36,7 @@ public class HealthScript : MonoBehaviour {
 		if(isPlayer)
 		{
 			playerStats = GetComponent<PlayerStats>();
+			playerAttack = GetComponent<PlayerAttack>();
 		}
 	}
 	
@@ -41,8 +45,15 @@ public class HealthScript : MonoBehaviour {
 		if(isDead)
 			return;
 
-		health -= damage;
-
+		if(isPlayer && playerAttack.is_Blocking && playerStats.stamina > damage)
+		{
+			playerStats.stamina -= damage;
+		}
+		else 
+		{
+			health -= damage;
+		}
+		
 		if(isPlayer)
 		{
 			playerStats.DisplayHealthStats(health);
@@ -53,6 +64,7 @@ public class HealthScript : MonoBehaviour {
 			if(EnemyController.Enemy_State == EnemyState.PATROL) {
 				EnemyController.chaseDistance = 1000f;
 			}
+			Debug.Log("Enemy HP: " + health);
 		}
 
 		if(health <= 0f) {
@@ -69,7 +81,7 @@ public class HealthScript : MonoBehaviour {
 			EnemyController.enabled = false;
 
 			enemyAnim.Dead();
-
+			GetComponentInChildren<CapsuleCollider>().enabled = false;
 			//Start Couroutine
 			StartCoroutine(DeadSound());
 			//Enemy Manager spawn more enemies
@@ -91,11 +103,13 @@ public class HealthScript : MonoBehaviour {
 
 		if(tag == Tags.PLAYER_TAG) 
 		{
+			UI.SetActive(false);
+			crosshair.SetActive(false);
 			Cursor.lockState = CursorLockMode.None;
 			RestartGame();
 		} else {
-			ScoreScript.scoreValue++;
 			Invoke("TurnOffGameObject", 10f);
+			ScoreScript.scoreValue++;
 		}
 	}
 
