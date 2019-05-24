@@ -11,8 +11,8 @@ TASKI:
 [ ] dzwiek - przyspiewki, teksty wpierdolu itd itp CRITICAL  
 [x] rozlokowanie wielu pseudokibicow (zrobiony enemy manager)  
 [x] liczenie punktow  
-[/] pasek sily (zmeczenie) (na razie tylko przy bieganiu sie zmniejsza)  
-[/] MENU rozgrywki ???? - wpisywanie nicku, top scores? (na razie tylko play game i quit/restart) LOW   
+[x] pasek sily (zmeczenie) (na razie tylko przy bieganiu sie zmniejsza)  
+[x] MENU rozgrywki ???? - wpisywanie nicku, top scores? (na razie tylko play game i quit/restart) LOW   
 [X] pasek zycia  
 [ ] mozliwosc przywolania ziomka przyciskiem myszy - np kibica ruchu VERY VERY LOW     
 [ ] rozlokowane na planszy potek ze zdrowiem NORMAL  
@@ -25,9 +25,9 @@ TASKI:
 [ ] Pejsy do modelu przeciwnika LOW  
 
 bugi do szybkiego fixa:  
-[ ] animacja strzałów z broni palnej + dzwięk (karabin maszynowy) HIGH  
+[x] animacja strzałów z broni palnej + dzwięk (karabin maszynowy) HIGH  
 [X] zatrzmywanie sprintu  
 [X] pasek staminy nie spada  
 [ ] przechodzenie przez tekstury (np drzewa) HIGH    
-[ ] Sprawdzenie budykow i assetów czy nie są transparentne (zeby nie dalo sie przez nie przechodzic) LOW    
-[ ] Sprawdzenie animacji maczety + zmiana broni na maczete bug  NORMAL  
+[/] Sprawdzenie budykow i assetów czy nie są transparentne (zeby nie dalo sie przez nie przechodzic) LOW (ogarniety budynek)    
+[x] Sprawdzenie animacji maczety + zmiana broni na maczete bug  NORMAL  
