@@ -7,9 +7,12 @@ public class EnemyAudio : MonoBehaviour {
 	private AudioSource audioSource;
 
 	[SerializeField]
-	private AudioClip screamClip, dieClip;
+	private AudioClip dieClip;
 
-	[SerializeField]
+    [SerializeField]
+    private AudioClip [] screamClip;
+    
+    [SerializeField]
 	private AudioClip[] attackClip;
 
 	// Use this for initialization
@@ -17,9 +20,12 @@ public class EnemyAudio : MonoBehaviour {
 		audioSource = GetComponent<AudioSource>();
 	}
 	
-	public void PlayScreamSound() {
-		audioSource.clip = screamClip;
-		audioSource.Play();
+	public void PlayScreamSound(float distanceToEnemy) {
+        float normalizeVolume = SoundMapper ( distanceToEnemy );
+        //print ( distanceToEnemy );
+        audioSource.clip = screamClip[Random.Range ( 0, screamClip.Length )];
+        audioSource.volume = normalizeVolume;
+        audioSource.Play();
 	}
 
 	public void PlayDeadSound() {
@@ -31,4 +37,18 @@ public class EnemyAudio : MonoBehaviour {
 		audioSource.clip = attackClip[Random.Range(0, attackClip.Length)];
 		audioSource.Play();
 	}
+
+    private float SoundMapper(float distance )
+    {
+        if ( distance >= 4 && distance < 18 )
+            return 1.0f;
+        else if ( distance >= 18 && distance < 21 )
+            return 0.85f;
+        else if ( distance >= 21 && distance < 34 )
+            return 0.70f;
+        if ( distance >= 34 && distance < 49 )
+            return 0.55f;
+        else
+            return 0.35f;
+    }
 }

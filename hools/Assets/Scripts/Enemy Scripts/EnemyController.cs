@@ -96,17 +96,18 @@ public class EnemyController : MonoBehaviour {
 		} else {
 			enemyAnim.Walk(false);
 		}
+        var distance = Vector3.Distance ( transform.position, target.position );
 
-		if(Vector3.Distance(transform.position, target.position) <= chaseDistance)
-		{
-			enemyAnim.Walk(false);
-			enemyState = EnemyState.CHASE;
+        if ( distance <= chaseDistance )
+        {
+            enemyAnim.Walk ( false );
+            enemyState = EnemyState.CHASE;
 
-			enemyAudio.PlayScreamSound();
-		}
-	}
+            enemyAudio.PlayScreamSound ( distance );
+        }
+    }
 
-	void Chase()
+    void Chase()
 	{
 		navAgent.isStopped = false;
 		navAgent.speed = runSpeed;

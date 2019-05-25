@@ -254,7 +254,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1371816627541220
 GameObject:
   m_ObjectHideFlags: 1
@@ -969,8 +969,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1463902408427918}
-  m_LocalRotation: {x: 0.53138655, y: 0.58186215, z: -0.40066126, w: 0.46747774}
-  m_LocalPosition: {x: -0.0014618434, y: 0.03552264, z: 0.8706989}
+  m_LocalRotation: {x: -0.07871194, y: -0.03080244, z: 0.70696527, w: -0.7021794}
+  m_LocalPosition: {x: 0.014852509, y: 0.30074206, z: 0.054768592}
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
   m_Children:
   - {fileID: 4325420504498116}
@@ -1235,8 +1235,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1457022223149620}
-  m_LocalRotation: {x: -0.7071067, y: -0.00002020059, z: 0.000019442643, w: 0.7071068}
-  m_LocalPosition: {x: 0.00020217896, y: -0.0061416626, z: -0.015670776}
+  m_LocalRotation: {x: -0.70710677, y: -0.000020220876, z: 0.000019416213, w: 0.7071069}
+  m_LocalPosition: {x: 0.00019724574, y: -0.0061416626, z: -0.015673108}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4058224161286032}
@@ -1344,7 +1344,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1783764468148362}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 44.76, y: 21.82, z: 136.61}
+  m_LocalPosition: {x: 59.73, y: 23.72, z: 136.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4354399296995218}
@@ -1742,9 +1742,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: cc5d0701b7e264a488ef8b8a3bff299e, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.159
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1862,6 +1862,8 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 2048
+  audioSource: {fileID: 0}
+  sounds: []
 --- !u!114 &114139886291643186
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1875,7 +1877,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 0.5
   runSpeed: 3
-  chaseDistance: 7
+  chaseDistance: 15
   attackDistance: 1.8
   chaseAfterAttack: 2
   patrolRadiusMin: 20
@@ -1910,6 +1912,7 @@ MonoBehaviour:
   isCannibal: 1
   deathMenu: {fileID: 0}
   UI: {fileID: 0}
+  crosshair: {fileID: 0}
 --- !u!114 &114868606786008252
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1921,12 +1924,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8681b97f828f0aa4c8a8d7d697d57715, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screamClip: {fileID: 8300000, guid: 64299035385fd9a428a5a8e3c4ecc7ee, type: 3}
   dieClip: {fileID: 8300000, guid: cc5d0701b7e264a488ef8b8a3bff299e, type: 3}
+  screamClip:
+  - {fileID: 8300000, guid: 7fe339fad07b1ce4b86f4ec9930ad88c, type: 3}
+  - {fileID: 8300000, guid: dbeb27d85e085f44f8e6fa7555300ccf, type: 3}
+  - {fileID: 8300000, guid: bd2797cc4c207844581a3a8c711a605f, type: 3}
+  - {fileID: 8300000, guid: 6f67c69891032ca429437139ca56c599, type: 3}
+  - {fileID: 8300000, guid: 76c823562d43b944791d7fbc2eb9ec0d, type: 3}
+  - {fileID: 8300000, guid: e1cb70d214693c645852fc4256d6415d, type: 3}
   attackClip:
-  - {fileID: 8300000, guid: a78ba1c4b551e7545b8aff8141fc5c67, type: 3}
-  - {fileID: 8300000, guid: d580433357c937c4ca58e55886965224, type: 3}
-  - {fileID: 8300000, guid: fb437b4ef5ae1a04d86529f50e2fd701, type: 3}
+  - {fileID: 8300000, guid: 3b3de02959689e046b39113b22e0c198, type: 3}
+  - {fileID: 8300000, guid: de17a419dffd0b444a6bddf90be7b501, type: 3}
+  - {fileID: 8300000, guid: 593376dae696ab54d83da7893e0f8955, type: 3}
 --- !u!136 &136300152650741184
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -2243,7 +2252,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.17
-  m_Speed: 3.5
+  m_Speed: 3
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 800

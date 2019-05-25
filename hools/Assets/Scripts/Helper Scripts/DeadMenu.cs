@@ -12,8 +12,12 @@ public class DeadMenu : MonoBehaviour {
 	[SerializeField]
 	GameObject HS;
 
+    private AudioSource audioSource;
 
-	public void PlayGame ()
+    [SerializeField]
+    private AudioClip soundTrack;
+
+    public void PlayGame ()
 	{
 		if (CheckScore()) {
 			SaveScore();
@@ -33,7 +37,11 @@ public class DeadMenu : MonoBehaviour {
 	
 	void Start() 
 	{
-		CheckScore();
+        //audioSource = GetComponent<AudioSource> ();
+        //audioSource.clip = soundTrack;
+        //audioSource.Play ();
+
+        CheckScore ();
 	}
 
 	public void InputYourName() {

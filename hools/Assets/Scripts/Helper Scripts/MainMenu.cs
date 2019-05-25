@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour {
 
 	GameObject HS1, HS2, HS3, HS4, HS5;
 
-	public void PlayGame ()
+    public void PlayGame ()
 	{
 		SceneManager.LoadScene("Gameplay");
 	}
@@ -27,9 +27,9 @@ public class MainMenu : MonoBehaviour {
 		HS3 = GameObject.Find("HS3");
 		HS4 = GameObject.Find("HS4");
 		HS5 = GameObject.Find("HS5");
-	}
+    }
 
-	public void Update ()
+    public void Update ()
 	{
 		if (PlayerPrefs.HasKey(0+"HScore"))
 			HS1.GetComponent<Text>().text = 1 + ". " + PlayerPrefs.GetString(0+"HScoreName") + ": " + PlayerPrefs.GetInt(0+"HScore");
