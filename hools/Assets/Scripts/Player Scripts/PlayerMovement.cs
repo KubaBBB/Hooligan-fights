@@ -3,6 +3,7 @@
 public class PlayerMovement : MonoBehaviour
 {
     private CharacterController _characterController;
+    private HealthScript healthScript;
 
     private Vector3 _moveDirection;
 
@@ -11,10 +12,15 @@ public class PlayerMovement : MonoBehaviour
 
     public float speed = 5f;
     public float jumpForce = 10;
+
+    float minSurviveFall = 0.8f;
+    float damageForSeconds = 45f;
+    float airTime = 0f;
     
     private void Awake ()
     {
         _characterController = GetComponent<CharacterController> ();
+        healthScript = GetComponent<HealthScript> ();
     }
 
 	// Update is called once per frame
@@ -44,10 +50,19 @@ public class PlayerMovement : MonoBehaviour
             _verticalVelocity -= _gravity * Time.deltaTime;
 
             PlayerJump ();
+
+            if(airTime > minSurviveFall )
+            {
+                float damage = damageForSeconds * airTime;
+                //Debug.Log ( airTime );
+                healthScript.ApplyDamage ( damage );
+            }
+            airTime = 0f;
         }
         else
         {
             _verticalVelocity -= _gravity * Time.deltaTime;
+            airTime += Time.deltaTime;
         }
 
         _moveDirection.y = _verticalVelocity * Time.deltaTime;
