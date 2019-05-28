@@ -7,7 +7,7 @@ public class EnemyAudio : MonoBehaviour {
 	private AudioSource audioSource;
 
 	[SerializeField]
-	private AudioClip dieClip;
+	private AudioClip [] dieClip;
 
     [SerializeField]
     private AudioClip [] screamClip;
@@ -29,7 +29,7 @@ public class EnemyAudio : MonoBehaviour {
 	}
 
 	public void PlayDeadSound() {
-		audioSource.clip = dieClip;
+		audioSource.clip = dieClip[Random.Range(0, attackClip.Length)];
 		audioSource.Play();
 	}
 

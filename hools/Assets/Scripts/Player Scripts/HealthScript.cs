@@ -37,6 +37,7 @@ public class HealthScript : MonoBehaviour {
 		{
 			playerStats = GetComponent<PlayerStats>();
 			playerAttack = GetComponent<PlayerAttack>();
+			enemyAudio = GetComponentInChildren<EnemyAudio>();
 		}
 	}
 	
@@ -57,6 +58,7 @@ public class HealthScript : MonoBehaviour {
 		if(isPlayer)
 		{
 			playerStats.DisplayHealthStats(health);
+			enemyAudio.PlayAttackSound();
 		}
 
 		if(isCannibal)
@@ -86,6 +88,8 @@ public class HealthScript : MonoBehaviour {
 			StartCoroutine(DeadSound());
 			//Enemy Manager spawn more enemies
 			EnemyManager.instance.EnemyDied(true);
+			PlayerAttack.ammo_revolver++;
+			PlayerAttack.ammo_rifle++;
 
 		}
 

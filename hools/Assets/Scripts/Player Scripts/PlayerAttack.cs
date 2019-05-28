@@ -1,10 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class PlayerAttack : MonoBehaviour {
 
     private WeaponManager _weaponManager;
+
+    public static int ammo_revolver = 12;
+    public static int ammo_rifle = 20;
 
     public float damage_axe = 40f;
     public float damage_fist = 10f;
@@ -23,6 +28,8 @@ public class PlayerAttack : MonoBehaviour {
     public bool is_Blocking;
 
     private PlayerStats playerStats;
+    public GameObject ammoObject;
+    Text currentAmmo;
 
     // Use this for initialization
     void Awake () {
@@ -32,6 +39,7 @@ public class PlayerAttack : MonoBehaviour {
         zoomCameraAnim = transform.Find(Tags.LOOK_ROOT).transform.Find(Tags.ZOOM_CAMERA).GetComponent<Animator>();
         crosshair = GameObject.FindWithTag(Tags.CROSSHAIR);
         mainCam = Camera.main;
+        currentAmmo = ammoObject.GetComponentInChildren<Text>();
     }
 
     void Start () {
@@ -40,6 +48,7 @@ public class PlayerAttack : MonoBehaviour {
     
     // Update is called once per frame
     void Update () {
+        ShowAmmo();
         WeaponShoot ();
         ZoomInAndOut();
     }
@@ -57,9 +66,12 @@ public class PlayerAttack : MonoBehaviour {
 
                 if ( _weaponManager.GetCurrentSelectedWeapon ().bulletType == WeaponBulletType.BULLET )
                 {
-                    _weaponManager.GetCurrentSelectedWeapon ().ShootAnimation ();
-
-                    BulletFired();
+                    if(ammo_revolver > 0)
+                    {
+                        _weaponManager.GetCurrentSelectedWeapon ().ShootAnimation ();
+                        BulletFired();
+                        ammo_revolver--;
+                    }
                 }
                 else
                 {
@@ -78,26 +90,18 @@ public class PlayerAttack : MonoBehaviour {
                     //spear or bow
                 }
             }
-
-            // if (Input.GetMouseButtonDown (1) && _weaponManager.GetCurrentSelectedWeapon().IsIdle() && _weaponManager.GetCurrentSelectedWeapon().meleeType == WeaponMeleeType.FISTS)
-            // {
-            //     is_Blocking = true;
-            //     _weaponManager.GetCurrentSelectedWeapon().Aim(true);
-            // }
-
-            // if (Input.GetMouseButtonUp (1) && _weaponManager.GetCurrentSelectedWeapon().meleeType == WeaponMeleeType.FISTS)
-            // {
-            //     is_Blocking = false;
-            //     _weaponManager.GetCurrentSelectedWeapon().Aim(false);
-            // }
         }
         else
         {
             if(Input.GetMouseButton(0) && Time.time > nextTimeToFire )
             {
-                _weaponManager.GetCurrentSelectedWeapon().ShootAnimation();
-                BulletFired();
-                nextTimeToFire = Time.time + 0.2f;
+                if(ammo_rifle > 0)
+                {
+                    _weaponManager.GetCurrentSelectedWeapon().ShootAnimation();
+                    BulletFired();
+                    ammo_rifle--;
+                    nextTimeToFire = Time.time + 0.2f;
+                }
             }
         }
     } // weapon shoot
@@ -108,12 +112,19 @@ public class PlayerAttack : MonoBehaviour {
         {
             if (Input.GetMouseButtonDown(1))
             {
-                zoomCameraAnim.Play(AnimationTags.ZOOM_IN_ANIM);
+                if (_weaponManager.GetCurrentSelectedWeapon().fireType == WeaponFireType.SINGLE)
+                    zoomCameraAnim.Play(AnimationTags.ZOOM_IN_ANIM);
+                else
+                    zoomCameraAnim.Play("ZoomInRifle");
+
                 crosshair.SetActive(false);
             }
             if (Input.GetMouseButtonUp(1))
             {
-                zoomCameraAnim.Play(AnimationTags.ZOOM_OUT_ANIM);
+                if (_weaponManager.GetCurrentSelectedWeapon().fireType == WeaponFireType.SINGLE)
+                    zoomCameraAnim.Play(AnimationTags.ZOOM_OUT_ANIM);
+                else
+                    zoomCameraAnim.Play("ZoomOutRifle");
                 crosshair.SetActive(true);
             }
         }
@@ -165,5 +176,23 @@ public class PlayerAttack : MonoBehaviour {
                 hit.transform.GetComponent<HealthScript>().ApplyDamage(damage);
             }
         }
+    }
+
+    void ShowAmmo() 
+    {
+        if ( _weaponManager.GetCurrentSelectedWeapon ().bulletType == WeaponBulletType.BULLET )
+        {   
+            if ( _weaponManager.GetCurrentSelectedWeapon ().fireType == WeaponFireType.SINGLE )
+            {
+                currentAmmo.text = ammo_revolver.ToString();
+            }
+            else
+            {
+                currentAmmo.text = ammo_rifle.ToString();
+            }
+            ammoObject.SetActive(true);
+        }
+        else
+            ammoObject.SetActive(false);
     }
 }

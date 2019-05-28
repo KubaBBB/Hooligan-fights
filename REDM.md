@@ -8,7 +8,7 @@ TASKI:
 [X] pseudokibic ( barwy i kolorki, model ludka jest ready)  
 [ ] raca - na wzór włóczni gotowego assetu HIGH  
 [/] modyfikacja planszy - CRITICAL PRIORIY !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  
-[ ] dzwiek - przyspiewki, teksty wpierdolu itd itp CRITICAL  
+[x] dzwiek - przyspiewki, teksty wpierdolu itd itp CRITICAL  
 [x] rozlokowanie wielu pseudokibicow (zrobiony enemy manager)  
 [x] liczenie punktow  
 [x] pasek sily (zmeczenie) (na razie tylko przy bieganiu sie zmniejsza)  
@@ -23,11 +23,12 @@ TASKI:
 [ ] DRZEWA zastąpione zwykłymi assetami  LOW  
 [ ] Zrobienie przejścia w wąwozie(most miedzy stronami) LOW 
 [ ] Pejsy do modelu przeciwnika LOW  
+[x] AMMO
 
 bugi do szybkiego fixa:  
 [x] animacja strzałów z broni palnej + dzwięk (karabin maszynowy) HIGH  
 [X] zatrzmywanie sprintu  
 [X] pasek staminy nie spada  
-[ ] przechodzenie przez tekstury (np drzewa) HIGH    
-[/] Sprawdzenie budykow i assetów czy nie są transparentne (zeby nie dalo sie przez nie przechodzic) LOW (ogarniety budynek)    
+[x] przechodzenie przez tekstury (np drzewa) HIGH    
+[x] Sprawdzenie budykow i assetów czy nie są transparentne (zeby nie dalo sie przez nie przechodzic) LOW (ogarniety budynek)    
 [x] Sprawdzenie animacji maczety + zmiana broni na maczete bug  NORMAL  

@@ -158,7 +158,7 @@ public class EnemyController : MonoBehaviour {
 		{
 			enemyAnim.Attack();
 			attackTimer = 0f;
-			enemyAudio.PlayAttackSound();
+			//enemyAudio.PlayAttackSound();
 		}
 
 		if (Vector3.Distance(transform.position, target.position) > attackDistance + chaseAfterAttack)

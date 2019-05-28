@@ -17,6 +17,7 @@ public class EnemyManager : MonoBehaviour {
 	public Transform[] cannibalSpawnPoints;
 
 	public float waitBeforeEnemySpawn = 10f;
+	private int index = 0;
 
 	void Awake () {
 		MakeInstance();
@@ -36,7 +37,6 @@ public class EnemyManager : MonoBehaviour {
 		}
 	}
 
-	int index = 0;
 	void SpawnEnemies() {
 		for (int i=0; i<cannibalEnemyCount; i++)
 		{
@@ -46,7 +46,6 @@ public class EnemyManager : MonoBehaviour {
 			Instantiate(cannibalPrefab, cannibalSpawnPoints[index].position, Quaternion.identity);
 			index++;
 		}
-
 		cannibalEnemyCount = 0;
 	}
 

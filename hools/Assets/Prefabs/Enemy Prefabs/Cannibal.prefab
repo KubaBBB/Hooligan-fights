@@ -1343,8 +1343,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1783764468148362}
-  m_LocalRotation: {x: -0, y: 0.4459865, z: -0, w: -0.89503974}
-  m_LocalPosition: {x: 44.813652, y: 30.888542, z: 151.45563}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 63.57, y: 24.514, z: 136.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4354399296995218}
@@ -1924,7 +1924,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8681b97f828f0aa4c8a8d7d697d57715, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dieClip: {fileID: 8300000, guid: cc5d0701b7e264a488ef8b8a3bff299e, type: 3}
+  dieClip:
+  - {fileID: 8300000, guid: 6068996103b45554da4dcfdf1e2ffbd4, type: 3}
+  - {fileID: 8300000, guid: 08635f5a1cd2f7b4da80fb5b2f76a0e8, type: 3}
+  - {fileID: 8300000, guid: 19a10f342eee0dd46b86ddf46eb6e79a, type: 3}
   screamClip:
   - {fileID: 8300000, guid: 7fe339fad07b1ce4b86f4ec9930ad88c, type: 3}
   - {fileID: 8300000, guid: dbeb27d85e085f44f8e6fa7555300ccf, type: 3}
