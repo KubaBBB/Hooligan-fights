@@ -1,5 +1,6 @@
 namespace Assets.Scripts.Water
 {
+    using System;
     using UnityEngine;
 
     /// <summary>
@@ -47,11 +48,18 @@ namespace Assets.Scripts.Water
             materialPropertyBlock = new MaterialPropertyBlock();
             SetUpPropertyBlock(materialPropertyBlock);
 
-            if (waterRenderers != null)
+            if ( waterRenderers != null )
             {
-                for (var i = 0; i < waterRenderers.Length; i++)
+                try
                 {
-                    waterRenderers[i].SetPropertyBlock(materialPropertyBlock);
+                    for ( var i = 0; i < waterRenderers.Length; i++ )
+                    {
+                        waterRenderers [0].SetPropertyBlock ( materialPropertyBlock );
+                    }
+                }
+                catch(Exception ex )
+                {
+
                 }
             }
         }
@@ -66,13 +74,19 @@ namespace Assets.Scripts.Water
         public void Update()
         {
             SetUpPropertyBlock(materialPropertyBlock);
-
-            if (waterRenderers != null)
+            try
             {
-                for (var i = 0; i < waterRenderers.Length; i++)
+                if ( waterRenderers != null )
                 {
-                    waterRenderers[i].SetPropertyBlock(materialPropertyBlock);
+                    for ( var i = 0; i < waterRenderers.Length; i++ )
+                    {
+                        waterRenderers [i].SetPropertyBlock ( materialPropertyBlock );
+                    }
                 }
+            }
+            catch(Exception ex )
+            {
+
             }
         }
 #endif

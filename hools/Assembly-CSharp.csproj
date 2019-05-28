@@ -78,8 +78,10 @@
     <Compile Include="Assets\Scripts\Helper Scripts\ArtifactScript.cs" />
     <Compile Include="Assets\Scripts\Helper Scripts\DeadMenu.cs" />
     <Compile Include="Assets\Scripts\Helper Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\Helper Scripts\MusicHelper.cs" />
     <Compile Include="Assets\Scripts\Helper Scripts\ScoreScript.cs" />
     <Compile Include="Assets\Scripts\Helper Scripts\TagHolder.cs" />
+    <Compile Include="Assets\Scripts\Helper Scripts\WaterHelper.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\AttackScript.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\AxeSound.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\HealthScript.cs" />
@@ -105,7 +107,7 @@
     <None Include="Assets\Shaders\Standard\_BloomAndFlares\BlendForBloom.shader" />
     <None Include="Assets\MobileDepthWater\Shaders\WaterTwoSide\Height\DiffuseColorHeightWaterTwoSide.shader" />
     <None Include="Assets\MobileDepthWater\Shaders\WaterOpaque\Depth\DiffuseDepthWater.shader" />
-    <None Include="Assets\MobileDepthWater\Shaders\WaterTwoSide\Height\DiffuseHeightWaterTwoSide.shader" />
+    <None Include="Assets\MobileDepthWater\Shaders\WaterOpaque\DiffuseHeightWaterTwoSide.shader" />
     <None Include="Assets\Shaders\Standard\ColorCorrectionCurves.shader" />
     <None Include="Assets\Shaders\Standard\_Antialiasing\FXAAPreset2.shader" />
     <None Include="Assets\MobileDepthWater\Shaders\WaterTwoSide\Depth\DiffuseColorDepthWaterTwoSide.shader" />

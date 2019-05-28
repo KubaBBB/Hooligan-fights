@@ -4,7 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private CharacterController _characterController;
     private HealthScript healthScript;
-
+    private GameObject water;
     private Vector3 _moveDirection;
 
     private float _gravity = 4 * 9.81f;
@@ -16,21 +16,21 @@ public class PlayerMovement : MonoBehaviour
     float minSurviveFall = 0.8f;
     float damageForSeconds = 45f;
     float airTime = 0f;
-    
+
     private void Awake ()
     {
         _characterController = GetComponent<CharacterController> ();
         healthScript = GetComponent<HealthScript> ();
     }
 
-	// Update is called once per frame
-	void Update () {
-        MoveThePlayer ();	
-	}
+    void Update ()
+    {
+        MoveThePlayer ();
+    }
 
     void MoveThePlayer ()
     {
-        _moveDirection = new Vector3 ( Input.GetAxis ( Axis.HORIZONTAL ), 
+        _moveDirection = new Vector3 ( Input.GetAxis ( Axis.HORIZONTAL ),
             0f,
             Input.GetAxis ( Axis.VERTICAL ) );
 
@@ -51,10 +51,9 @@ public class PlayerMovement : MonoBehaviour
 
             PlayerJump ();
 
-            if(airTime > minSurviveFall )
+            if ( airTime > minSurviveFall )
             {
                 float damage = damageForSeconds * airTime;
-                //Debug.Log ( airTime );
                 healthScript.ApplyDamage ( damage );
             }
             airTime = 0f;
@@ -70,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
 
     void PlayerJump ()
     {
-        if(_characterController.isGrounded && Input.GetKeyDown ( KeyCode.Space ) )
+        if ( _characterController.isGrounded && Input.GetKeyDown ( KeyCode.Space ) )
         {
             _verticalVelocity = jumpForce;
         }
