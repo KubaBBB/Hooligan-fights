@@ -22,4 +22,13 @@ public class PlayerStats : MonoBehaviour {
 		float staminaValue = stamina / 100f;
 		staminaStats.fillAmount = staminaValue;
 	}
+
+    public void AddStamina (float staminaToAdd)
+    {
+        var staminaSum = staminaToAdd + stamina;
+        if ( staminaSum >= 100.0f )
+            stamina = 100.0f;
+        else
+            stamina += staminaToAdd;
+    }
 }
