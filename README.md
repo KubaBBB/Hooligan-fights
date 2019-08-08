@@ -29,15 +29,15 @@ On the map are located respawn items:
 
 ### Screenshots  
 #### Saloon
-![alt text](https://github.com/KubaBBB/Hooligan-fights/blob/master/markdownfiles/saloon.png "saloon")
+![alt text](https://github.com/KubaBBB/Hooligan-fights/blob/master/markdownfiles/saloon.PNG "saloon")
   
 #### Target
-![alt text](https://github.com/KubaBBB/Hooligan-fights/blob/master/markdownfiles/target.png "target")
+![alt text](https://github.com/KubaBBB/Hooligan-fights/blob/master/markdownfiles/target.PNG "target")
   
 #### Island
-![alt text](https://github.com/KubaBBB/Hooligan-fights/blob/master/markdownfiles/island.png "island")
+![alt text](https://github.com/KubaBBB/Hooligan-fights/blob/master/markdownfiles/island.PNG "island")
   
 #### World
-![alt text](https://github.com/KubaBBB/Hooligan-fights/blob/master/markdownfiles/ammo.png "ammo")
+![alt text](https://github.com/KubaBBB/Hooligan-fights/blob/master/markdownfiles/ammo.PNG "ammo")
 
 
